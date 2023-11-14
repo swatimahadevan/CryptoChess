@@ -59,7 +59,7 @@ function Projects({isConnected, getHistory, getBetAmount}) {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">Your METAMASK Account</h1>
+        <h1 className="project-heading"></h1>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={10} className="project-card">
           <div className="flex-center history-container">

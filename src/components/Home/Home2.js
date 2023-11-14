@@ -16,40 +16,11 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET US INTRODUCE<span className="purple"> CryptoChess </span> 
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> C++, Javascript and Go. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+            Our idea behind the project is to harness the power of the blockchain technology and integrate it into a chess game which gives players the opportunity to win Ether. By leveraging blockchain, every move is recorded in a transparent, immutable ledger. This ensures a fair and secure gaming experience. Within this chess game framework, users have the option to place a bet, engage in gameplay with an AI, and stand the chance to double their initial wager upon successful completion of the game. The bet will be recorded in the ledger as well, ensuring an undisputed transaction amount when the payouts happen.
+
             </p>
           </Col>
           <Col md={4} className="myAvtar">
