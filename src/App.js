@@ -301,6 +301,8 @@ const AdminPortalDisplay = () => {
         <Route path="/CryptoChess/Profile" element={<ProfileDisplay/>} />
         <Route path = "/CryptoChess/Chessboard" element = {<ChessBoardDisplay />}></Route>
         <Route path = "/CryptoChess/Bidding" element = {<BiddingDisplay/>}></Route>
+        <Route path = "/CryptoChess/History" element = {<HistoryDisplay/>}></Route>
+        <Route path = "/CryptoChess/Adminportal" element = {<AdminPortalDisplay/>}></Route>
     </Routes>
     <Footer />
 </div>

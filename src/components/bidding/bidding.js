@@ -41,6 +41,9 @@ function Projects({isConnected, startedGame, setFinalBidAmount}) {
     <Container fluid className="project-section">
       <Particle />
       <Container>
+      <h1 className="project-heading">Bidding Platform</h1>
+        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+          <Col md={10} className="project-card">
       <div className="flex-center chessboard-container">
       <h2 className="heading_col">Enter your bidding amount:</h2>
       <label htmlFor="biddingAmount">Bidding Amount:</label>
@@ -59,6 +62,8 @@ function Projects({isConnected, startedGame, setFinalBidAmount}) {
         Start Chess Game
       </button>
     </div>
+    </Col>
+    </Row>
       </Container>
     </Container>
         :

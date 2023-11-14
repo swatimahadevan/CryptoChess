@@ -1,5 +1,53 @@
-/* Import global styles */
-@import "../../global.css";
+.project-card {
+  /* Additional styling if needed */
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+  height: 1000px; /* Set a fixed height for the logo container */
+  margin-right: 20px; /* Adjust margin as needed */
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-height: 100%; /* Set the logo's max height to fill the container */
+  width: auto;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+/* Additional styling for profile details */
+.profile-label {
+  /* Styles for profile label */
+}
+
+.global-message {
+  /* Styles for global message */
+}
+
+
+.global-message {
+  /* Styles for global message */
+}
+
+/* Add these styles to your stylesheet */
+.profile-details {
+  color: white;
+}
+
+.profile-label {
+  font-size: 24px; /* Adjust the size as needed */
+  font-weight: bold;
+}
+
 
 /* CSS Reset */
 * {
@@ -16,20 +64,33 @@ body {
   display: flex;
   flex-direction: column; /* Stack children vertically */
 }
-
-/* Existing styles */
-.profile-background {
-  background-image: url("../../images/bgpic.jpg");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.project-card {
+  /* Additional styling if needed */
 }
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.profile-details {
+  flex: 1;
+}
+
+/* Additional styling for profile details */
+.profile-label {
+  /* Styles for profile label */
+}
+
+.global-message {
+  /* Styles for global message */
+}
+
 
 .profile {
   background-color: black;
