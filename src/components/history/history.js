@@ -8,6 +8,7 @@ import Chessboard from "chessboardjsx";
 import { Chess } from "chess.js";
 import './history.css';
 import Loader from "../Loader/Loader";
+import Button from "react-bootstrap/Button";
 
 function Projects({isConnected, getHistory, getBetAmount}) {
     const [chess] = useState(
@@ -55,6 +56,8 @@ function Projects({isConnected, getHistory, getBetAmount}) {
         )
     }
 
+    console.log(moveNum)
+
   return (
     isConnected ? 
     <Container fluid className="project-section">
@@ -69,10 +72,10 @@ function Projects({isConnected, getHistory, getBetAmount}) {
                 width={400}
                 position={fen}
             />
-            <div direction="row" spacing={4}>
-                <button isDisabled = {moveNum === 0} onClick = {() => setMoveNumWrapper(moveNum - 1)}>Prev</button>
-                <text fontSize='2xl'>{moveNum}</text>
-                <button isDisabled = {moveNum === moves.length / 2} onClick = {() => setMoveNumWrapper(moveNum + 1)}>Next</button>
+            <div style={{ paddingTop: "10px" }}>
+                <Button  disabled = {moveNum === 0} onClick = {() => setMoveNumWrapper(moveNum - 1)}>Prev</Button>
+                <text style={{ paddingRight: "10px", paddingLeft: "10px" }}>{moveNum}</text>
+                <Button disabled = {moveNum === moves.length / 2} onClick = {() => setMoveNumWrapper(moveNum + 1)}>Next</Button>
             </div>
         </div>
           </Col>

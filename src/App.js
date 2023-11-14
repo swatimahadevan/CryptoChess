@@ -123,7 +123,7 @@ export default function App() {
           console.log(error);
       }
   }
-
+console.log(ethereum.selectedAddress)
 ////// Contract Deployment. 
   // IMPORTANT: async / await is essential to get values instead of Promise. 
   const startGame = async () => {

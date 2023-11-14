@@ -7,7 +7,7 @@ contract Chess {
         string newCoord;
     }
 
-    address[] private admins = [0xD5342e25cB392b5FF20E0BdaDE80335bD771CfAE, 0xDeB6559DCD9e3051a04aee760d83779463Eb8402];
+    address[] private admins = [0xD5342e25cB392b5FF20E0BdaDE80335bD771CfAE, 0xDeB6559DCD9e3051a04aee760d83779463Eb8402, 0x42ca8504AB565a6918c366A31246d1974Ce366b8];
     uint MAX_BET_AMOUNT = 10;
 
     mapping(address => uint) private bets;
@@ -24,9 +24,13 @@ contract Chess {
         delete moves[msg.sender];
     }
 
-    function move(string memory oldCoord, string memory newCoord) public {
+    function move(string[] memory moveStringFrom, string[] memory moveStringTo) public {
         require(!hasEnded[msg.sender], "Session has already ended");
-        moves[msg.sender].push(Move(oldCoord, newCoord));
+        require(moveStringFrom.length == moveStringTo.length, "Moves should have equal length");
+        
+        for(uint i = 0; i < moveStringFrom.length; i++) {
+            moves[msg.sender].push(Move(moveStringFrom[i], moveStringTo[i]));
+        }
     }
 
     function restart() public {

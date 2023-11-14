@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import "./adminportal.css"; 
 import Loader from "../Loader/Loader";
 import { ADMINS } from "../../constants/admin"
+import Button from "react-bootstrap/Button";
 
 const AdminPortal = ({isConnected, user, deposit, withdraw, getBalance}) => {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -58,28 +59,30 @@ const AdminPortal = ({isConnected, user, deposit, withdraw, getBalance}) => {
     return (
         isConnected ? 
         !isAdmin ?
-        <>You do not have access to this page</>
+        <div className="global-message">You do not have access to this page</div>
         :
-        <div className="admin-container">
-            <p>Welcome Admin {user}</p>
+        <div className="admin-container global-message">
+            <p>Welcome admin {user}</p>
             <p>The Contract Balance: {balance}</p>
-            <div direction="row" spacing={8} width={700}>
-                <input
-                    value={withdrawAmount}
-                    onChange={event => setWithdrawAmount(event.target.value)}
-                    placeholder='Withdraw Amount'
-                    size='sm'
-                />
-                <button isDisabled={withdrawAmount > balance} onClick={async() => await withdrawEther()}>Withdraw</button>
-            </div>
-            <div direction="row" spacing={8} width={700}>
-                <input
-                    value={depositAmount}
-                    onChange={event => setDepositAmount(event.target.value)}
-                    placeholder='Deposit Amount'
-                    size='sm'
-                />
-                <button onClick={async() => await depositEther()}>Deposit</button>
+            <div>
+                <div>
+                    <input
+                        value={withdrawAmount}
+                        onChange={event => setWithdrawAmount(event.target.value)}
+                        placeholder='Withdraw Amount'
+                        size='sm'
+                    />
+                    <Button disabled={withdrawAmount > balance} onClick={async() => await withdrawEther()}>Withdraw</Button>
+                </div>
+                <div>
+                    <input
+                        value={depositAmount}
+                        onChange={event => setDepositAmount(event.target.value)}
+                        placeholder='Deposit Amount'
+                        size='sm'
+                    />
+                    <Button onClick={async() => await depositEther()}>Deposit</Button>
+                </div>
             </div>
         </div>
     :
