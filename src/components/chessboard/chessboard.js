@@ -7,7 +7,7 @@ import { Chess } from "chess.js";
 import { useNavigate, Navigate } from "react-router-dom";
 import Preloader from "../Pre";
 import "./chessboard.css";
-// import Loader from "../loader/loader";
+import Loader from "../Loader/Loader";
 
 function Projects(props) {
    
@@ -17,7 +17,7 @@ function Projects(props) {
     if (!startedGame) {
       return (
         <div className="flex-center chessboard-container">
-         {/* <Loader/> */}
+         <Loader/>
         </div>
       )
     }
@@ -178,8 +178,7 @@ function Projects(props) {
     
                 setFen(chess.fen());
                 updateCapturedPieces();
-                // /* await */ move(lastMove.from, lastMove.to)
-    
+
                 // Check for winner after computer move
                 if (chess.isGameOver()) {
                   const winner = chess.turn() === "w" ? "Black" : "White";
@@ -199,11 +198,7 @@ function Projects(props) {
           setErrorMessage("Invalid move. Please try again.");
         }
       };
-    
-      // const formatMovesString = (moves) => {
-      //   return moves.join(", ");
-      // };
-    
+
       const getBestMove = () => {
         const moves = chess.moves();
         return moves[Math.floor(Math.random() * moves.length)];
@@ -285,7 +280,7 @@ function Projects(props) {
     <div>
       <button className="fork-btn-inner" onClick={async() => await handleNewGame()}>New Game</button>
     </div>
-    {isLoading && <><div>Storing result</div></>}
+    {isLoading && <><div>Storing result</div><Loader /></>}
     <div className="chessboard-wrapper">
     <Chessboard
         width={400}

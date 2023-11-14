@@ -7,6 +7,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import Chessboard from "chessboardjsx";
 import { Chess } from "chess.js";
 import './history.css';
+import Loader from "../Loader/Loader";
 
 function Projects({isConnected, getHistory, getBetAmount}) {
     const [chess] = useState(
@@ -49,7 +50,7 @@ function Projects({isConnected, getHistory, getBetAmount}) {
     if (amountBet == null) {
         return (
             <div className="flex-center history-container">
-                {/* <Loader/> */}
+                <Loader/>
             </div>
         )
     }
