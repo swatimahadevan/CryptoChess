@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import meta from "../../Assets/Projects/meta.png";
 import Cookies from "js-cookie";
+import { useNavigate, Navigate } from "react-router-dom";
 
 function Projects(props) {
       // useEffect to set the address in a cookie when the component is mounted
@@ -14,6 +15,7 @@ function Projects(props) {
   }, [props.address]);
 
   return (
+    props.isConnected ?
     <Container fluid className="project-section">
       <Particle />
       <Container>
@@ -43,6 +45,8 @@ function Projects(props) {
         </Row>
       </Container>
     </Container>
+        :
+        <Navigate to="/CryptoChess/Home" />
   );
 }
 

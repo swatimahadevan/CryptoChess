@@ -105,7 +105,7 @@ export default function App() {
           setBalance(bal);
           setIsConnected(true);
 
-          navigate('/profile');
+          navigate('/CryptoChess/Profile');
       }
       catch (error){
           setIsConnected(false);
@@ -296,9 +296,11 @@ const AdminPortalDisplay = () => {
       <Navbar />
         <ScrollToTop />
     <Routes>
-        <Route path="/" element={<Home isHaveMetamask = {haveMetamask} connectTo = {connectWallet} />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<ProfileDisplay/>} />
+        <Route path="/CryptoChess/" element={<Home isHaveMetamask = {haveMetamask} connectTo = {connectWallet} />} />
+        <Route path="/CryptoChess/Home" element={<Home isHaveMetamask = {haveMetamask} connectTo = {connectWallet}/>} />
+        <Route path="/CryptoChess/Profile" element={<ProfileDisplay/>} />
+        <Route path = "/CryptoChess/Chessboard" element = {<ChessBoardDisplay />}></Route>
+        <Route path = "/CryptoChess/Bidding" element = {<BiddingDisplay/>}></Route>
     </Routes>
     <Footer />
 </div>

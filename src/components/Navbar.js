@@ -54,13 +54,13 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/home" onClick={() => updateExpanded(false)}>
+              <Nav.Link as={Link} to="/CryptoChess/Home" onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/profile" onClick={() => updateExpanded(false)}>
+              <Nav.Link as={Link} to="/CryptoChess/Profile" onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Profile
               </Nav.Link>
             </Nav.Item>
@@ -91,10 +91,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/CryptoChess/Bidding"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Play Chess!
               </Nav.Link>
             </Nav.Item>
 
