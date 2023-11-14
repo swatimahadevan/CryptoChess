@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CryptoChess/static/css/main.4f7f58a7.css",
-    "main.js": "/CryptoChess/static/js/main.dc2e4471.js",
+    "main.css": "/CryptoChess/static/css/main.15d1b3fd.css",
+    "main.js": "/CryptoChess/static/js/main.9d4de8cb.js",
     "static/js/415.4d6acbeb.chunk.js": "/CryptoChess/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/CryptoChess/static/js/787.1ed0c42c.chunk.js",
     "static/media/leaf.png": "/CryptoChess/static/media/leaf.ff2616f664c8c0ceab91.png",
@@ -16,13 +16,13 @@
     "static/media/avatar.svg": "/CryptoChess/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
     "static/media/pre.svg": "/CryptoChess/static/media/pre.4410c5baaa673cc131da.svg",
     "index.html": "/CryptoChess/index.html",
-    "main.4f7f58a7.css.map": "/CryptoChess/static/css/main.4f7f58a7.css.map",
-    "main.dc2e4471.js.map": "/CryptoChess/static/js/main.dc2e4471.js.map",
+    "main.15d1b3fd.css.map": "/CryptoChess/static/css/main.15d1b3fd.css.map",
+    "main.9d4de8cb.js.map": "/CryptoChess/static/js/main.9d4de8cb.js.map",
     "415.4d6acbeb.chunk.js.map": "/CryptoChess/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/CryptoChess/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f7f58a7.css",
-    "static/js/main.dc2e4471.js"
+    "static/css/main.15d1b3fd.css",
+    "static/js/main.9d4de8cb.js"
   ]
 }

@@ -82,8 +82,6 @@ function Projects({ isConnected, startedGame, setFinalBidAmount }) {
                 className="fork-btn-inner"
               >
                  Start Chess Game
-                {/* <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} /> */}
               </Button>
 
                  

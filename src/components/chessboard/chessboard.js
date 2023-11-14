@@ -283,7 +283,7 @@ function Projects(props) {
     {errorMessage && <div className="error-message">{errorMessage}</div>}
     <div className="warning-message">Warning: You will lose your money bet if you restart the game before it ends</div>
     <div>
-      <button className="new-game-button" onClick={async() => await handleNewGame()}>New Game</button>
+      <button className="fork-btn-inner" onClick={async() => await handleNewGame()}>New Game</button>
     </div>
     {isLoading && <><div>Storing result</div></>}
     <div className="chessboard-wrapper">
