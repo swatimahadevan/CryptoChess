@@ -1,39 +1,52 @@
+/* CSS styles */
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to fill viewport */
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .chessboard-container {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  flex-grow: 1; /* Grow to fill remaining space */
+  margin-bottom: 20px; /* Add margin to separate from the footer */
+}
 
-  body {
-    background-color: black; 
-    margin: 0; 
-    padding: 0; 
-  }
-/* chessboard.css */
+.chessboard-wrapper {
+  height: 60vh; /* Adjust the chessboard height */
+  /* Other styling for the chessboard wrapper */
+}
 
-.new-game-button {
-  background-color: #4caf50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+/* Add styles for positioning chessboard */
+.chessboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chessboard-container {
+  margin-top: 80px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
-.new-game-button:hover {
-  background-color: #45a049; /* Darker green on hover */
+.chessboard {
+  max-width: 90%; /* Adjust as needed */
+  max-height: 80vh; /* Adjust as needed */
+  overflow: auto;
 }
 
-.warning-message {
-  color: orange
-}
+/* Additional styles for footer or other components */
+/* Add your footer styling here */
 
-  

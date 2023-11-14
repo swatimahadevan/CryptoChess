@@ -6,25 +6,18 @@ import Chessboard from "chessboardjsx";
 import { Chess } from "chess.js";
 import { useNavigate, Navigate } from "react-router-dom";
 import Preloader from "../Pre";
+import "./chessboard.css";
+// import Loader from "../loader/loader";
 
 function Projects(props) {
-    const [load, upadateLoad] = useState(true);
-
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        upadateLoad(false);
-      }, 1200);
-      
-    return () => clearTimeout(timer);
-}, []);
-
+   
   
     const { isConnected, startedGame, balance, move, endGame, restartGame, setStartedGame } = props;
 
     if (!startedGame) {
       return (
         <div className="flex-center chessboard-container">
-          <Preloader load={load} />
+         {/* <Loader/> */}
         </div>
       )
     }
@@ -292,8 +285,8 @@ function Projects(props) {
     <div>
       <button className="new-game-button" onClick={async() => await handleNewGame()}>New Game</button>
     </div>
-    {/* ... (existing code) */}
-    {isLoading && <><div>Storing result</div><Preloader /></>}
+    {isLoading && <><div>Storing result</div></>}
+    <div className="chessboard-wrapper">
     <Chessboard
         width={400}
         position={fen}
@@ -310,6 +303,7 @@ function Projects(props) {
         squareStyling={(square) => (selectedSquare ? highlightSquare(selectedSquare) : squareStyling(square))}
         onSquareClick={(square) => handleSquareClick(square)}
       />
+    </div>
     </div>
       </Container>
     </Container>
