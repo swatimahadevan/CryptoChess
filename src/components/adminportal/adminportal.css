@@ -5,3 +5,14 @@
     justify-content: center;
     height: 100vh;
   }
+
+  .input-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Adjust the gap between input fields and buttons */
+  }
+  
+  .input-field {
+    display: flex;
+    align-items: center;
+  }

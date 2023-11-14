@@ -64,8 +64,8 @@ const AdminPortal = ({isConnected, user, deposit, withdraw, getBalance}) => {
         <div className="admin-container global-message">
             <p>Welcome admin {user}</p>
             <p>The Contract Balance: {balance}</p>
-            <div>
-                <div>
+            <div  className="input-row">
+                <div className="input-field">
                     <input
                         value={withdrawAmount}
                         onChange={event => setWithdrawAmount(event.target.value)}
