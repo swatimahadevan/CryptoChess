@@ -61,7 +61,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link as={Link} to="/CryptoChess/Profile" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Profile
+              <CgFileDocument style={{ marginBottom: "2px" }} /> Profile
               </Nav.Link>
             </Nav.Item>
 
@@ -78,13 +78,13 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/project"
+                to="/CryptoChess/AdminPortal"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                Admin Portal
               </Nav.Link>
             </Nav.Item>
 
