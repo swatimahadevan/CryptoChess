@@ -77,7 +77,6 @@ function Projects({ isConnected, startedGame, setFinalBidAmount }) {
                 <Button
                  disabled={biddingAmount <= 0 || biddingAmount > 10}
                  onClick={handleBidSubmit}
-                target="_blank"
                 className="fork-btn-inner"
               >
                  Start Chess Game
