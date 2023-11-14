@@ -1,0 +1,1 @@
+export const ADMINS = ["0xd5342e25cb392b5ff20e0bdade80335bd771cfae"]
