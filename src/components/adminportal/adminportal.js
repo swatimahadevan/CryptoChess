@@ -59,7 +59,7 @@ const AdminPortal = ({isConnected, user, deposit, withdraw, getBalance}) => {
     return (
         isConnected ? 
         !isAdmin ?
-        <div className="global-message">You do not have access to this page</div>
+        <div className="admin-container global-message">Only admins have access to this page</div>
         :
         <div className="admin-container global-message">
             <p>Welcome admin {user}</p>
