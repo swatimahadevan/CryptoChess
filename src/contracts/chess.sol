@@ -35,6 +35,7 @@ contract Chess {
 
     function restart() public {
         hasEnded[msg.sender] = false;
+        bets[msg.sender] = 0;
         delete moves[msg.sender];
     }
 
