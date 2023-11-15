@@ -17,9 +17,17 @@ import {
 } from "react-icons/ai";
 import "./bidding.css"; // Import the CSS file for styling
 
-function Projects({ isConnected, startedGame, setFinalBidAmount }) {
+function Projects({ isConnected, startedGame, setStartedGame, setFinalBidAmount }) {
   const [biddingAmount, setBiddingAmount] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedFen = localStorage.getItem("chessFen");
+    if (savedFen) {
+      setStartedGame(true)
+      navigate("/CryptoChess/Chessboard");
+    }
+  }, [])
 
   const handleBidChange = (event) => {
     let input = event.target.value;

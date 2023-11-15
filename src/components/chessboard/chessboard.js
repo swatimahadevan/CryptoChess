@@ -8,6 +8,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import Preloader from "../Pre";
 import "./chessboard.css";
 import Loader from "../Loader/Loader";
+import Button from "react-bootstrap/Button";
 
 function Projects(props) {
    
@@ -259,7 +260,7 @@ function Projects(props) {
         setStartedGame(false)
         localStorage.removeItem("chessFen");
         await restartGame()
-        navigate("/EE4032ChessGame/bidding")
+        navigate("/CryptoChess/bidding")
       };
     
       const handleQuitGame = async () => {
@@ -277,28 +278,36 @@ function Projects(props) {
     {winner && <div className="winner">Winner: {winner}</div>}
     {errorMessage && <div className="error-message">{errorMessage}</div>}
     <div className="warning-message">Warning: You will lose your money bet if you restart the game before it ends</div>
-    <div>
-      <button className="fork-btn-inner" onClick={async() => await handleNewGame()}>New Game</button>
+    { !isLoading &&
+    <div style={{ paddingBottom: "10px" }}>
+      <Button className="fork-btn-inner" onClick={async() => await handleNewGame()}>New Game</Button>
     </div>
-    {isLoading && <><div>Storing result</div><Loader /></>}
-    <div className="chessboard-wrapper">
-    <Chessboard
-        width={400}
-        position={fen}
-        onDrop={async(move) =>
-          await handleMove(
-            move.sourceSquare[0],
-            move.sourceSquare[1],
-            move.targetSquare[0],
-            move.targetSquare[1]
-          )
-        }
-        onMouseOverSquare={(square) => handleSquareMouseOver(square)}
-        onMouseOutSquare={() => handleSquareMouseOut()}
-        squareStyling={(square) => (selectedSquare ? highlightSquare(selectedSquare) : squareStyling(square))}
-        onSquareClick={(square) => handleSquareClick(square)}
-      />
-    </div>
+    }
+    {isLoading ?
+      <div className="chessboard-container">
+        <div>Saving result</div>
+        <Loader />
+      </div>
+      :
+      <div className="chessboard-wrapper">
+      <Chessboard
+          width={400}
+          position={fen}
+          onDrop={async(move) =>
+            await handleMove(
+              move.sourceSquare[0],
+              move.sourceSquare[1],
+              move.targetSquare[0],
+              move.targetSquare[1]
+            )
+          }
+          onMouseOverSquare={(square) => handleSquareMouseOver(square)}
+          onMouseOutSquare={() => handleSquareMouseOut()}
+          squareStyling={(square) => (selectedSquare ? highlightSquare(selectedSquare) : squareStyling(square))}
+          onSquareClick={(square) => handleSquareClick(square)}
+        />
+      </div>
+    }
     </div>
       </Container>
     </Container>

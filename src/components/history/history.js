@@ -55,9 +55,7 @@ function Projects({isConnected, getHistory, getBetAmount}) {
             </div>
         )
     }
-
-    console.log(moveNum)
-
+    
   return (
     isConnected ? 
     <Container fluid className="project-section">
@@ -68,6 +66,7 @@ function Projects({isConnected, getHistory, getBetAmount}) {
           <Col md={10} className="project-card">
           <div className="flex-center history-container">
             <div>Amount Bet: {amountBet}</div>
+            <div>Game moves will only be saved when the game ends</div>
             <Chessboard
                 width={400}
                 position={fen}
