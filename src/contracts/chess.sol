@@ -64,6 +64,8 @@ contract Chess {
 
     function withdraw(uint amount) public payable {
         require(isAdmin(msg.sender), "Only authorized admin can call withdraw()");
+        require(amount <= address(this).balance, "Not enough balance");
+
         payable(msg.sender).transfer(amount);
     }
 
